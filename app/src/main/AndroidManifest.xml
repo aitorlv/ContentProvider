@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.aitor.micontentprovider" >
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.aitor.micontentprovider.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        }
+        <provider
+            android:name="com.example.aitor.micontentprovider.Proveedor"
+            android:authorities="com.example.aitor.micontentprovider.Proveedor"
+            android:enabled="true"
+            android:exported="true" >
+        </provider>
+
+        <activity
+            android:name="com.example.aitor.micontentprovider.Insertar"
+            android:label="@string/title_activity_insertar" >
+        </activity>
+        <activity
+            android:name="com.example.aitor.micontentprovider.Modificar"
+            android:label="@string/title_activity_insertar" >
+        </activity>
+        <activity
+            android:name="com.example.aitor.micontentprovider.Fotos"
+            android:label="@string/title_activity_fotos" >
+        </activity>
+        <activity
+            android:name="com.example.aitor.micontentprovider.Secundaria"
+            android:label="@string/title_activity_fotos" >
+        </activity>
+    </application>
+
+</manifest>
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_modificar"
+        android:title="@string/modificar"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        />
+    <item
+        android:id="@+id/action_borrar"
+        android:title="@string/borrar"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        />
+    <item
+        android:id="@+id/action_fotos"
+        android:title="@string/fotos"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        />
+
+
+</menu>
