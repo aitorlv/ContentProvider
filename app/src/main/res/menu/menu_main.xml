@@ -13,7 +13,13 @@
         />
     <item
         android:id="@+id/action_leer"
-        android:title="leer"
+        android:title="Leer"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        />
+    <item
+        android:id="@+id/action_subir"
+        android:title="Subir"
         android:orderInCategory="100"
         android:showAsAction="never"
         />

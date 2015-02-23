@@ -20,6 +20,7 @@ public class Contrato{
         public static final String CONTENT_TYPE ="vnd.android.cursor.dir/vnd.izv.inmobiliaria";
         public static final String CONTENT_TYPE_INMUEBLE ="vnd.android.cursor.item/vnd.inmobiliaria";
         public static final Uri CONTENT_URI =Uri.parse("content://" +Proveedor.AUTORIDAD + "/" + TABLA);
+        public static final Uri CONTENT_URI_SUBIR =Uri.parse("content://" +Proveedor.AUTORIDAD + "/" +SUBIDO);
 
 
     }

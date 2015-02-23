@@ -9,6 +9,8 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteQueryBuilder;
 import android.net.Uri;
+import android.util.Log;
+import android.widget.Toast;
 
 /**
  * Created by aitor on 27/01/2015.
@@ -20,13 +22,14 @@ public class Proveedor extends ContentProvider {
     public static String AUTORIDAD="com.example.aitor.micontentprovider.Proveedor";
     private static final UriMatcher convierteUri2Int;
     private static final int INMUEBLES = 1;
-    private static final int INMUEBLE_ID = 2;
+    private static final int SUBIDO = 2;
 
 
     static {
         convierteUri2Int = new UriMatcher(UriMatcher.NO_MATCH);
         convierteUri2Int.addURI(AUTORIDAD,Contrato.TablaInmueble.TABLA, INMUEBLES);
-        convierteUri2Int.addURI(AUTORIDAD,Contrato.TablaInmueble.TABLA + "/#", INMUEBLE_ID);
+        convierteUri2Int.addURI(AUTORIDAD,Contrato.TablaInmueble.SUBIDO ,SUBIDO);
+        //convierteUri2Int.addURI(AUTORIDAD,Contrato.TablaInmueble.SUBIDO + "/#", SUBIDO);
     }
 
 
@@ -43,8 +46,9 @@ public class Proveedor extends ContentProvider {
         switch (convierteUri2Int.match(uri)) {
             case INMUEBLES:
                 break;
-            case INMUEBLE_ID:
-                condicion = condicion + "_id = " + uri.getLastPathSegment();
+            case SUBIDO:
+
+                //condicion = condicion + " = ? " + uri.getLastPathSegment();
                 break;
             default:
                 throw new IllegalArgumentException("URI " + uri);
@@ -86,7 +90,7 @@ public class Proveedor extends ContentProvider {
         switch (convierteUri2Int.match(uri)) {
             case INMUEBLES:
                 break;
-            case INMUEBLE_ID:
+            case SUBIDO:
                 condicion = condicion + "_id = " + uri.getLastPathSegment();
                 break;
             default: throw new IllegalArgumentException("URI " + uri);

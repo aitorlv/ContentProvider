@@ -3,6 +3,7 @@
     package="com.example.aitor.micontentprovider" >
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -31,11 +32,7 @@
         </activity>
         <activity
             android:name="com.example.aitor.micontentprovider.Modificar"
-            android:label="@string/title_activity_insertar" >
-        </activity>
-        <activity
-            android:name="com.example.aitor.micontentprovider.Fotos"
-            android:label="@string/title_activity_fotos" >
+            android:label="@string/title_activity_modificar" >
         </activity>
         <activity
             android:name="com.example.aitor.micontentprovider.Secundaria"
